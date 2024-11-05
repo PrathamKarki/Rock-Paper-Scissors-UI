@@ -9,16 +9,17 @@
 header{
     width: 90%;
     margin: auto;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 h1{
     width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
 }
 body{
     font-family: lato, 'sans-serif';
-    background: linear-gradient(90deg, #FFE066 30%, #FFB347 100%);
+    background: #c7365f;
     color: black;
 }
 
@@ -31,6 +32,7 @@ img{
     padding: .2rem;
     border-radius: 50%;
     transition: transform 0.3s ease;
+    animation: moveFromLeft 2s ease-out;
 }
 
 img:hover{
@@ -40,7 +42,7 @@ img:hover{
 .top-right{
   
     text-align: center; 
-    padding: 15px 20px;
+    padding: 15px 19px;
     background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
     color: white;
@@ -90,14 +92,52 @@ img:hover{
     padding: 12px 32px;
     font-size: 1.2rem; 
     color: white; 
-    background-color: #28A745; 
+    background-color: #008080; 
     border: none; 
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: scale(1.1); 
+    animation: moveToTop 2s; 
 }
+
 
 .reset:hover {
     background-color: #FF8C33; 
-    transform: scale(1.1); 
+}
+
+@keyframes moveFromLeft {
+ 0%{
+    transform: translateX(100px) rotate(2deg);
+
+ }  
+ 50%{
+    transform: translateX(-20px)  rotate(-5deg);
+ }
+ 
+ 80%{
+    transform: translateX(5px);
+ }
+ 100%{
+    transform: translateX(0)
+ }
+}
+
+
+@keyframes moveToTop {
+    0%{
+        transform: translateY(100px) scale(0.8);
+    }
+    50%{
+        transform: translateY(-10px) scale(1.05) rotate(1deg);
+
+    }
+
+    80%{
+        transform: translateY(-5px) scale(1.02) rotate(1deg);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
