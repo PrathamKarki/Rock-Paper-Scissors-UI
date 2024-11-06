@@ -107,6 +107,24 @@ img:hover{
 }
 
 
+.selection-info{
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 1rem;
+    color: white;
+    width: 90%;
+    max-width: 600px; 
+    border-radius: 10px;
+    /* text-align: center; */
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+.selection-info span{
+    font-weight: 600;
+    color: #FF8C33;
+}
+
+
 .reset:hover {
     background-color: #FF8C33; 
 }
