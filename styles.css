@@ -116,9 +116,11 @@ img:hover{
     border-radius: 10px;
     /* text-align: center; */
     font-size: 1.2rem;
-    margin: auto;
+    margin: 2rem auto;
 }
-
+.selection-info p{
+    margin-bottom: .5rem;
+}
 .selection-info span{
     font-weight: 600;
     color: #FF8C33;
