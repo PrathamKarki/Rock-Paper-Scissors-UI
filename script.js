@@ -92,7 +92,7 @@ restart.addEventListener('click',function(){
     humanSelectionEl.textContent = "none";
     computerSelectionEl.textContent = "none";
     outcome.textContent = "";
-    resultEl.style.display = 'none';
+    // resultEl.style.display = 'none';
     resetButton.style.display = 'none';
 
     scoreHumanEl.textContent = '0';

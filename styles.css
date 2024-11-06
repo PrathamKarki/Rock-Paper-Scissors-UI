@@ -103,7 +103,7 @@ img:hover{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     transform: scale(1.1); 
-    animation: moveToTop 2s; 
+    animation: moveToTop 2s ease-out .85s; 
 }
 
 
@@ -127,9 +127,6 @@ img:hover{
 }
 
 
-.reset:hover {
-    background-color: #FF8C33; 
-}
 
 @keyframes moveFromLeft {
  0%{
@@ -165,4 +162,44 @@ img:hover{
     100%{
         transform: translateY(0);
     }
+}
+
+.reset-btn{
+    position: relative;
+}
+
+
+.reset-btn::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s;
+
+}
+
+.reset-btn:active{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgb(0,0,0,0.2);
+}
+
+.reset-btn:hover {
+    background-color: #FF8C33; 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover::after{
+    background-color: #FF8C33;
+    opacity: 0;
+    transform: scaleX(1.5) scaleY(1.3);
+}
+
+.reset-btn:hover{
+    background-color: #FF8C33;
 }
