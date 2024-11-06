@@ -9,7 +9,8 @@
 header{
     width: 90%;
     margin: auto;
-    padding: 1.5rem;
+    padding: 1rem;
+    margin-bottom: .3rem;
 }
 h1{
     width: 100%;
@@ -24,12 +25,13 @@ body{
 }
 
 img{
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     cursor: pointer;
     border: 5px solid transparent;
-    padding: .2rem;
+    padding: .5rem;
     border-radius: 50%;
     transition: transform 0.3s ease;
     animation: moveFromLeft 2s ease-out;
@@ -65,9 +67,12 @@ img:hover{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: .5rem;
     gap: 3rem;
     padding: 5em;
+    flex-wrap: wrap;
+   
+   
     
 }
 
