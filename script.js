@@ -103,5 +103,5 @@ restart.addEventListener('click', function(){
      outcome.textContent = '';
      roundEl.textContent = currentRound; 
      scoreUserEl.textContent = userScore; 
-     scoreUserEl.textContent = userScore; 
+     scoreComputerEl.textContent = computerScore; 
 })
