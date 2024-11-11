@@ -71,15 +71,12 @@ img:hover{
     gap: 3rem;
     padding: 5em;
     flex-wrap: wrap;
-   
-   
-    
 }
 
 
 .result{
     margin: auto;
-    max-width: 300px;
+    max-width: 500px;
     background-color: rgba(0, 0, 0, 0.5); 
     margin-top: 2rem;
     text-align: center;
@@ -103,9 +100,10 @@ img:hover{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     transform: scale(1.1); 
-    animation: moveToTop 2s ease-out .85s; 
 }
-
+.reset:hover{
+    opacity: 0.6;
+}
 
 .selection-info{
     background-color: rgba(0, 0, 0, 0.5); 
@@ -114,7 +112,6 @@ img:hover{
     width: 90%;
     max-width: 600px; 
     border-radius: 10px;
-    /* text-align: center; */
     font-size: 1.2rem;
     margin: 2rem auto;
 }
@@ -126,80 +123,3 @@ img:hover{
     color: #FF8C33;
 }
 
-
-
-@keyframes moveFromLeft {
- 0%{
-    transform: translateX(100px) rotate(2deg);
-
- }  
- 50%{
-    transform: translateX(-20px)  rotate(-5deg);
- }
- 
- 80%{
-    transform: translateX(5px);
- }
- 100%{
-    transform: translateX(0)
- }
-}
-
-
-@keyframes moveToTop {
-    0%{
-        transform: translateY(100px) scale(0.8);
-    }
-    50%{
-        transform: translateY(-10px) scale(1.05) rotate(1deg);
-
-    }
-
-    80%{
-        transform: translateY(-5px) scale(1.02) rotate(1deg);
-    }
-
-    100%{
-        transform: translateY(0);
-    }
-}
-
-.reset-btn{
-    position: relative;
-}
-
-
-.reset-btn::after{
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.3s;
-
-}
-
-.reset-btn:active{
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgb(0,0,0,0.2);
-}
-
-.reset-btn:hover {
-    background-color: #FF8C33; 
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px 4px rgba(0, 0, 0, 0.2);
-}
-
-.reset-btn:hover::after{
-    background-color: #FF8C33;
-    opacity: 0;
-    transform: scaleX(1.5) scaleY(1.3);
-}
-
-.reset-btn:hover{
-    background-color: #FF8C33;
-}
