@@ -2,6 +2,7 @@ let userScore = 0;
 let computerScore = 0;
 let currentRound = 0;
 let humanChoice = '';
+let tie = 0;
 const rockEl = document.querySelector('.rock');
 const paperEl = document.querySelector('.paper');
 const scissorsEl = document.querySelector('.scissors');
@@ -15,6 +16,7 @@ const scoreComputerEl = document.querySelector('.score-computer');
 const scoreUserEl = document.querySelector('.score-user');
 const roundEl = document.querySelector('.round-count')
 let isPlaying = true;  // flag to stop game after 5 rounds
+const tieEl = document.querySelector('.tie-score')
 
 rockEl.addEventListener('click',function(){
     if(isPlaying){
@@ -58,6 +60,8 @@ function playRound(humanChoice){
         const computerChoiceOutcome = computerChoice();
     if(humanChoice === computerChoiceOutcome){
         outcome.textContent = `It's a tie for this Round!`
+        tie++;
+        tieEl.textContent = tie;
     } else if(humanChoice === 'Rock' && computerChoiceOutcome === 'Scissors' ||
         humanChoice === 'Paper' && computerChoiceOutcome === 'Rock' || humanChoice === 'Scissors' && computerChoiceOutcome ==='Paper'){
             outcome.textContent = `Human Wins this Round!`
@@ -93,6 +97,7 @@ function playRound(humanChoice){
 restart.addEventListener('click', function(){
     isPlaying = true;
     userScore = 0;
+    tie=0;
     computerScore = 0;
     currentRound = 0;
     humanChoice = '';
@@ -104,4 +109,5 @@ restart.addEventListener('click', function(){
      roundEl.textContent = currentRound; 
      scoreUserEl.textContent = userScore; 
      scoreComputerEl.textContent = computerScore; 
+     tieEl.textContent = tie;
 })
